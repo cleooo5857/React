@@ -35,7 +35,7 @@ function AddList({user}) {
     //수정하기
     const onEditList = () => {
         setEdit(false)
-        // map으로 돌린 배열 id와 find함수로 돌린 userlist.id 조건이 맞는 값을저장
+        // textarea 값, map으로 반환된 user.id 값을 Reducer에 전달하기위해 디스패치 사용
         userListDispatch({
             type: ADIT_TEXT,
             payload: {

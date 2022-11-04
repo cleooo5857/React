@@ -35,12 +35,7 @@ function AddList({user}) {
     //수정하기
     const onEditList = () => {
         setEdit(false)
-
         // map으로 돌린 배열 id와 find함수로 돌린 userlist.id 조건이 맞는 값을저장
-        const newEdit = userList.find((userlist) => userlist.id === user.id)
-        newEdit.name = nameText
-
-
         userListDispatch({
             type: ADIT_TEXT,
             payload: {

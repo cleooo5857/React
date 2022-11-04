@@ -44,7 +44,11 @@ const UserListRducer = (state, action) => {
         case REMOVE_STATE:
             return state.filter((list) => list.id !== action.payload.id);
         case ADIT_TEXT:
-            return [...state]
+                const newState = [...state]
+                const newText = newState.find((userlist) => userlist.id === action.payload.id)
+                newText.name = action.payload.name
+                return state
+                
         default:
             return;
 
